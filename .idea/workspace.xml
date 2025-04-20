@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8673f7f6-460d-4712-bdf1-89140e38043f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +55,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/domingos.lima/OneDrive - DB - MEDICINA DIAGNOSTICA LTDA/Documentos/GitHub/projeto-devops-domingos-lima",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,6 +81,8 @@
       <updated>1745166609038</updated>
       <workItem from="1745166611379" duration="706000" />
       <workItem from="1745169192883" duration="882000" />
+      <workItem from="1745171126677" duration="399000" />
+      <workItem from="1745187823511" duration="416000" />
     </task>
     <servers />
   </component>
