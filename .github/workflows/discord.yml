@@ -1,14 +1,19 @@
-name: Discord
+name: Continuous Integration
 
 on:
-  -push
+  push:
+
 jobs:
   discord:
     runs-on: ubuntu-latest
-    staps:
-      - uses: actions/checkout@v4
+    steps:
+      # Step para fazer checkout do código
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step para enviar mensagem para o Discord usando a action
       - name: Run Discord Webhook
-        user: Sniddl/discord-commits@v1.6
+        uses: Sniddl/discord-commits@v1.6
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           template: "avatar-with-link"
