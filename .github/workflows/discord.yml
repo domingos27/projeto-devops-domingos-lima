@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Continuos Integration
 
 on:
@@ -15,3 +16,19 @@ jobs:
           webhook: ${{ secrets.DISCORD_WEBHOOK }
           template: "avatar-with-link"
           include-extras: true
+=======
+name: Discord Webhook
+
+on: [push]
+
+jobs:
+  git:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Discord Webhook
+        uses: johnnyhuy/actions-discord-git-webhook@main
+        with:
+          webhook_url: ${{ secrets.YOUR_DISCORD_WEBHOOK_URL }}
+>>>>>>> 5c3191525a8fd2ce5abcf573881e72e681a94380
