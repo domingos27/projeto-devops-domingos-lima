@@ -1,20 +1,18 @@
 import unittest
 
-
 # Supondo que você tenha uma função para somar dois números
 def somar(a, b):
     return a + b
-
 
 # E uma função para subtrair dois números
 def subtrair(a, b):
     return a - b
 
-
 class TesteFuncoes(unittest.TestCase):
 
     def test_somar(self):
-        self.assertEqual(somar(2, 4), 7)
+        # Corrigido: soma de 1 + 4 deve ser 5, e não 7
+        self.assertEqual(somar(1, 4), 5)  # Corrigido de 7 para 5
         self.assertEqual(somar(-1, 1), 0)
 
     def test_subtrair(self):
@@ -32,7 +30,6 @@ class TesteFuncoes(unittest.TestCase):
     # Teste de subtração com valores negativos
     def test_subtrair_negativos(self):
         self.assertEqual(subtrair(-2, -2), 0)
-
 
 if __name__ == "__main__":
     unittest.main()
