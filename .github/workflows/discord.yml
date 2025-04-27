@@ -1,17 +1,14 @@
-name: Discord Commits Notification
+name: Discord Webhook
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
-  notify:
+  git:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Commit Message to Discord
-        run: |
-          curl -H "Content-Type: application/json" \
-          -X POST \
-          -d '{"content": "🚀 Novo commit enviado para o projeto!"}' \
-          https://discordapp.com/api/webhooks/1366121449575944395/0qgBaB1FX2YFb6fCPN7ENr99nt3PgXQDvSsxgOzOkpeoEJAEXxEbn4-EYufLnapDLyxP
+      - uses: actions/checkout@v4
+
+      - name: Run Discord Webhook
+        uses: johnnyhuy/actions-discord-git-webhook@main
+        with:
+          webhook_url: ${{ secrets.YOUR_DISCORD_WEBHOOK_URL }}
