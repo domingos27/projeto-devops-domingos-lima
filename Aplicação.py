@@ -14,7 +14,7 @@ def subtrair(a, b):
 class TesteFuncoes(unittest.TestCase):
 
     def test_somar(self):
-        self.assertEqual(somar(3, 4), 7)
+        self.assertEqual(somar(2, 4), 7)
         self.assertEqual(somar(-1, 1), 0)
 
     def test_subtrair(self):
