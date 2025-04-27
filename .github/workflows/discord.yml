@@ -1,16 +1,17 @@
-name: Discord Commits Notification
+name: Continuos Integration
 
 on:
-  push:
-    branches:
-      - main
+  - push
 
 jobs:
-  notify:
+  discord:
     runs-on: ubuntu-latest
     steps:
-      - name: Send commit message to Discord
-        uses: appleboy/discord-commits@v1.0.0
+      - uses: actions/checkout@v4
+      - name: Run Discord Webhook
+        uses: Sniddl/discord-commits@v1.6
         with:
-          webhook_id: '1366121449575944395'
-          webhook_token: '0qgBaB1FX2YFb6fCPN7ENr99nt3PgXQDvSsxgOzOkpeoEJAEXxEbn4-EYufLnapDLyxP'
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK }
+          webhook: ${{ secrets.DISCORD_WEBHOOK }
+          template: "avatar-with-link"
+          include-extras: true
